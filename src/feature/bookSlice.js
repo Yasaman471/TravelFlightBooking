@@ -9,15 +9,12 @@ const BookingSlice = createSlice({
   initialState,
   reducers: {
     BOOKING: (state, action) => {
-      const newData = [...state.Booking];
-      newData.push(action.payload);
-      return { Booking: newData };
+      state.Booking.push(action.payload);
     },
     DELETE: (state, action) => {
-      const filterData = state.Booking.filter(
-        (item) => item.id !== action.payload.id,
+      state.Booking = state.Booking.filter(
+        (item) => item.id !== action.payload,
       );
-      return { Booking: filterData };
     },
   },
 });

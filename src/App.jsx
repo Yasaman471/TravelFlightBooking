@@ -1,5 +1,6 @@
 import Booking from "./components/Booking";
 import Header from "./components/Header";
+import Table from "./components/Table";
 
 function App() {
   return (
@@ -7,7 +8,7 @@ function App() {
       <Header />
       <section className="h-screen">
         <Booking />
-        <div>Table</div>
+        <Table />
       </section>
     </div>
   );
